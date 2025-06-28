@@ -55,13 +55,21 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
 ## 📂 Project Structure
 
 ├── app.py # Main Streamlit app: SmartSynth + RAG sidebar
+
 ├── rag_chatbot.py # RAG logic: PDF + CSV + hybrid support
+
 ├── data_loader.py # CSV loader
+
 ├── metadata_generator.py # Metadata inference
+
 ├── model_selector_agent.py # Adaptive model selector
+
 ├── feedback_loop_agent.py # Agentic feedback loop
+
 ├── utility_evaluator_agent.py # Utility comparison logic
+
 ├── requirements.txt
+
 ├── .env # Store GOOGLE_API_KEY
 
 
