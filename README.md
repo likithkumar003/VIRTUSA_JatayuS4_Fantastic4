@@ -85,19 +85,19 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
 
 1️⃣ **Clone & Setup**
 
-git clone https://github.com/yourusername/SmartSynth.git
-cd SmartSynth
-python -m venv venv
+    git clone https://github.com/yourusername/SmartSynth.git
+    cd SmartSynth
+    python -m venv venv
 # Activate:
-venv\Scripts\activate  # Windows
+    venv\Scripts\activate  # Windows
 # or:
-source venv/bin/activate  # macOS/Linux
-pip install -r requirements.txt
+    source venv/bin/activate  # macOS/Linux
+    pip install -r requirements.txt
 
 
 # .env file
 GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY
 
 
-streamlit run app.py
+    streamlit run app.py
 
