@@ -1,0 +1,17 @@
+numpy
+matplotlib
+pandas
+numpy
+seaborn
+scikit-learn
+sdv>=1.19.0
+sdmetrics>=0.11.0
+
+PyPDF2
+streamlit
+langchain
+faiss-cpu
+langchain-google-genai
+google-generativeai
+python-dotenv
+
