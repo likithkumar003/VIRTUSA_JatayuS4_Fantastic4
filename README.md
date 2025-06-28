@@ -97,14 +97,19 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
     cd SmartSynth
     python -m venv venv
 2️⃣**Activate Environment:**
+
     venv\Scripts\activate  # Windows
+
 **or:**
+
     source venv/bin/activate  # macOS/Linux
     pip install -r requirements.txt
 
 3️⃣**Make sure add your API key in .env file**
-GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY
+
+    GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY
 
 4️⃣**Run**
+
     streamlit run app.py
 
