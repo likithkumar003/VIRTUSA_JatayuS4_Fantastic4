@@ -55,6 +55,7 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
 ## 📂 Project Structure
 
 ├── app.py # Main Streamlit app: SmartSynth + RAG sidebar
+
 ├── rag_chatbot.py # RAG logic: PDF + CSV + hybrid support
 ├── data_loader.py # CSV loader
 ├── metadata_generator.py # Metadata inference
