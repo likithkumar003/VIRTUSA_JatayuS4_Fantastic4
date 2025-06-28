@@ -88,16 +88,15 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
     git clone https://github.com/yourusername/SmartSynth.git
     cd SmartSynth
     python -m venv venv
-# Activate:
+2️⃣**Activate Environment:**
     venv\Scripts\activate  # Windows
-# or:
+**or:**
     source venv/bin/activate  # macOS/Linux
     pip install -r requirements.txt
 
-
-# .env file
+3️⃣**Make sure add your API key in .env file**
 GOOGLE_API_KEY=YOUR_GOOGLE_API_KEY
 
-
+4️⃣**Run**
     streamlit run app.py
 
