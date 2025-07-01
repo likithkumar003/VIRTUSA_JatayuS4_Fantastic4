@@ -6,7 +6,7 @@ seaborn
 scikit-learn
 sdv>=1.19.0
 sdmetrics>=0.11.0
-
+langchain_community
 PyPDF2
 streamlit
 langchain
