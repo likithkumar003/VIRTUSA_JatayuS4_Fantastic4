@@ -100,12 +100,13 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
 
     python -m venv venv
     venv\Scripts\activate  # Windows
-
-
-**or:**
-
     source venv/bin/activate  # macOS/Linux
+
+
+**Install Dependencies:**
+
     pip install -r requirements.txt
+    
 
 3️⃣**Make sure add your API key in .env file**
 
