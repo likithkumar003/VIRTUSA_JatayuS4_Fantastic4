@@ -1,13 +1,14 @@
 
-
 import streamlit as st
 import pandas as pd
 from data_loader import load_data
 from metadata_generator import generate_metadata
 from model_selector_agent import auto_select_model
-from feedback_loop_agent import feedback_loop
+# from feedback_loop_agent import feedback_loop
 from utility_evaluator_agent import evaluate_utility
 from rag_chatbot import launch_rag_interface
+from row_predictor_agent import predict_row_count
+
 
 st.set_page_config(page_title="SmartSynth with RAG", layout="wide")
 
@@ -85,22 +86,47 @@ with col1:
         st.success(f"✅ Loaded {df.shape[0]} rows × {df.shape[1]} columns")
         st.dataframe(df.head())
 
-        target_col = st.selectbox("🎯 Select target column", df.columns)
-        num_rows = st.number_input("📏 Number of synthetic rows", min_value=10, max_value=10000, value=len(df), step=100)
+        import target_predictor_agent as tpa
+
+        # After CSV uploaded
+        auto_target = tpa.predict_target_column(df)
+        st.info(f"🤖 Agent recommends: {auto_target} as a Suggested target")
+
+        target_col = st.selectbox("🎯 Select target column", df.columns, index=df.columns.get_loc(auto_target))
+
+
+        metadata = generate_metadata(df)
+        model1 = auto_select_model(df, metadata)
+        model_name = model1.__class__.__name__
+
+    # 🧩 NEW: Predict suggested rows
+        suggested_rows = predict_row_count(df, model_name)
+        st.info(f"🤖 Agent recommends: **{suggested_rows} rows** for best utility & coverage!")
+        num_rows = st.number_input(
+        "📏 Number of synthetic rows",
+        min_value=10,
+        max_value=100000,
+        value=suggested_rows,
+        step=100
+        )
+
 
         if st.button("⚡ Generate Synthetic Data"):
             metadata = generate_metadata(df)
-            model = auto_select_model(df, metadata)
-            synthetic_df, quality_score, model_used, utility_score = feedback_loop(
-                model=model,
+            
+            from feedback_loop_agent import agentic_feedback_loop
+
+            synthetic_df, quality_score, utility_score, model_used = agentic_feedback_loop(
                 data=df,
                 metadata=metadata,
+                target_col=target_col,
                 threshold=0.90,
                 num_rows=num_rows
             )
 
-            st.success("✅ Synthetic data generated!")
+
             st.info(f"📊 Quality Score: {quality_score:.2f}")
             real_acc, synth_acc = evaluate_utility(df, synthetic_df, target_col, return_both=True)
             st.write(f"📊 Real Accuracy: {real_acc:.2f} | Synthetic Accuracy: {synth_acc:.2f}")
+            st.success("✅ Synthetic data generated! You can download👇😉")
             st.download_button("⬇️ Download Synthetic CSV", synthetic_df.to_csv(index=False), file_name="synthetic_output.csv")
