@@ -48,13 +48,7 @@ def evaluate_utility(real_data, synthetic_data, target_col, return_both=False):
         print(f"[📈] Real R2 Score:     {real_score:.2f}")
         print(f"[📉] Synthetic R2 Score:{synth_score:.2f}")
 
-    # Bonus: Plot Real vs Synthetic Target Distribution
-    fig, ax = plt.subplots(figsize=(6, 4))
-    sns.kdeplot(y_real, label='Real Target', fill=True, alpha=0.5, color='green')
-    sns.kdeplot(y_synth, label='Synthetic Target', fill=True, alpha=0.5, color='orange')
-    plt.legend()
-    plt.title(f"Real vs Synthetic Target Distribution ({target_col})")
-    st.pyplot(fig)
+   
 
     if return_both:
         return real_score, synth_score
