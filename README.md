@@ -16,6 +16,11 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
 - ✅ Supports **hybrid mode** — combine PDFs and CSVs for a unified knowledge base.
 - ✅ Download synthetic data **and** your chat logs for auditing.
 
+  ## 🎯 How it Does
+
+  <img width="6912" height="3456" alt="Copy of Architecture (4)" src="https://github.com/user-attachments/assets/da0e484c-b273-4527-ae14-edb71ea50260" />
+
+
 ---
 
 ## 🚀 Hackathon Context
