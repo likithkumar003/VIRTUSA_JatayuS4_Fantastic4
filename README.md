@@ -18,7 +18,8 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
 
   ## 🎯 How it Does
 
-  <img width="6912" height="3456" alt="Copy of Architecture (4)" src="https://github.com/user-attachments/assets/da0e484c-b273-4527-ae14-edb71ea50260" />
+  <img width="1920" height="1080" alt="Company Overview" src="https://github.com/user-attachments/assets/f1c9ae25-610f-4d88-819b-4225eb2719ae" />
+
 
 
 ---
