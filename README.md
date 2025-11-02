@@ -112,7 +112,7 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
 
 3️⃣**Install Dependencies:**
 
-    pip install -r Requirements.txt
+    pip install -r requirements.txt
     
 
 4️⃣**Make sure add your API key in .env file**
