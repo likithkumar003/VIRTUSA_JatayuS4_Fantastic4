@@ -100,7 +100,8 @@ Built for privacy-preserving data creation, analysis, and domain-specific explor
 1️⃣ **Clone & Setup**
 
     git clone "https://github.com/likithkumar003/VIRTUSA_JatayuS4_Fantastic4"
-    cd Synthetic_data_generator_with_Rag_chatbot
+    cd VIRTUSA_JatayuS4_Fantastic4
+
     
 2️⃣**Activate Environment:**
 
